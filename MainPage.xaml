@@ -7,11 +7,16 @@
         <StackLayout Padding="20">
             <Label Text="{Binding Message}" FontSize="30" TextColor="Black" HorizontalTextAlignment="Center"/>
             <Image Source="{Binding CurrentImage}" HorizontalOptions="Center" HeightRequest="300" />
-            <Label FontAttributes="Bold" FontSize="30" HorizontalOptions="Center" Text="{Binding Spotlight}"/>
+            <Label FontAttributes="Bold" FontSize="30" HorizontalOptions="Center" Text="{Binding Spotlight}" TextColor="#b0b8b4"/>
             <Entry x:Name="GuessBox" Placeholder="Enter Guess" HorizontalOptions="Center" />
-            <Label Text="{Binding GameStatus}" FontSize="20" HorizontalTextAlignment="Center" />
-            <Button x:Name="Guess" Text="Guess" Clicked="Guess_Clicked" VerticalOptions="Center" CornerRadius="50" HeightRequest="60" WidthRequest="300" BackgroundColor="Orange" BorderColor="Black" BorderWidth="2"/>
-            <ImageButton Clicked="Reset_Clicked" HeightRequest="100" WidthRequest="300" CornerRadius="50" Source="reset.png" Margin="0,50,0,0"/>
+            <Label Text="{Binding GameStatus}" FontSize="20" HorizontalTextAlignment="Center" TextColor="#b0b8b4"/>
+            <HorizontalStackLayout>
+            <Button x:Name="Guess" Text="Guess" TextColor="#b0b8b4"  FontAttributes="Bold" Clicked="Guess_Clicked" VerticalOptions="Center"      
+                    CornerRadius="10" HeightRequest="60" WidthRequest="100" BackgroundColor="#f5fffa" BorderColor="#b0b8b4" 
+                    BorderWidth="2" HorizontalOptions="StartAndExpand" Margin="65,40,60,0"/>
+                <ImageButton Clicked="Reset_Clicked" HeightRequest="100" WidthRequest="50" CornerRadius="50" Source="resethangman.png" Margin="0,40,0,0" HorizontalOptions="EndAndExpand"/>
+                </HorizontalStackLayout>
+                    
         </StackLayout>
     </ScrollView>
 
